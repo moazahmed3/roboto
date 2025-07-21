@@ -24,7 +24,7 @@
   }
 
   .heading {
-    @apply bg-gradient-to-r from-[#8750f7] to-white bg-clip-text text-transparent;
+    @apply bg-gradient-to-r from-primary to-white bg-clip-text text-transparent;
   }
 
   .btn {
@@ -32,7 +32,7 @@
   }
 
   .btn-primary {
-    @apply text-white capitalize inline-block bg-gradient-to-r from-[#2a1454] via-primary to-[#2a1454] bg-[length:200%] hover:bg-[-100px];
+    @apply text-white capitalize inline-block bg-gradient-to-r from-secondary via-primary to-secondary bg-[length:200%] hover:bg-[-100px];
   }
 
   .btn-secondary {

@@ -22,6 +22,7 @@ window.addEventListener("scroll", function () {
   }
 });
 
+
 // ScrollReveal
 const sr = ScrollReveal();
 
