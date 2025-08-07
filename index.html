@@ -30,7 +30,6 @@
   </head>
   <body class="bg-body">
     <!-- =================== start button up  =================== -->
-
     <a
       href="#"
       class="fixed right-5 bottom-5 size-11 flex justify-center items-center bg-transparent border-1 border-primary text-primary rounded-full shadow-lg transition hover:bg-primary hover:text-white z-0"
@@ -40,10 +39,11 @@
     <!-- =================== end button up  =================== -->
 
 
+    
     <!-- =================== start navbar  =================== -->
     <nav
       id="navbar"
-      class="navbar text-white sticky top-0 left-0 right-0 z-40 py-4 box-Shadow"
+      class="navbar text-white sticky top-0 left-0 right-0 z-40 py-4 box-shadow"
     >
       <div class="container">
         <div class="inner-nav flex justify-between">
@@ -93,12 +93,14 @@
       <section class="hero mt-10" id="hero">
         <div class="container">
           <div
-            class="row items-center gap-y-10 justify-center md:justify-between"
+            class="flex flex-wrap items-center gap-y-10 justify-center md:justify-between"
           >
-            <div class="md:w-7/12">
+            <div class="md:w-8/12">
               <div class="hero-content">
                 <h3 class="text-white text-3xl font-extrabold">I am Roboto</h3>
-                <h1 class="text-6xl py-3 font-bold my-5 heading typing"></h1>
+                <h1
+                  class="text-6xl py-3 font-bold my-5 heading-gradient after:animate-typing"
+                ></h1>
                 <p class="text-muted leading-10 text-2xl">
                   I break down complex user experinece problems to create
                   integritiy focussed solutions that connect billions of people
@@ -123,9 +125,9 @@
       <!-- =================== start counter  =================== -->
       <section class="counter py-20" id="counter">
         <div class="container">
-          <div class="row justify-between gap-y-10">
+          <div class="flex flex-wrap justify-between gap-y-10">
             <!-- Card 1 -->
-            <div class="w-full sm:w-1/2 lg:w-1/4 px-2">
+            <div class="w-full sm:w-2/4 lg:w-1/4 px-2">
               <div
                 class="rounded-lg flex flex-col items-center justify-center gap-4 py-8"
               >
@@ -138,7 +140,7 @@
             </div>
 
             <!-- Card 2 -->
-            <div class="w-full sm:w-1/2 lg:w-1/4 px-2">
+            <div class="w-full sm:w-2/4 lg:w-1/4 px-2">
               <div
                 class="rounded-lg flex flex-col items-center justify-center gap-4 py-8"
               >
@@ -151,7 +153,7 @@
             </div>
 
             <!-- Card 3 -->
-            <div class="w-full sm:w-1/2 lg:w-1/4 px-2">
+            <div class="w-full sm:w-2/4 lg:w-1/4 px-2">
               <div
                 class="rounded-lg flex flex-col items-center justify-center gap-4 py-8"
               >
@@ -164,7 +166,7 @@
             </div>
 
             <!-- Card 4 -->
-            <div class="w-full sm:w-1/2 lg:w-1/4 px-2">
+            <div class="w-full sm:w-2/4 lg:w-1/4 px-2">
               <div
                 class="rounded-lg flex flex-col items-center justify-center gap-4 py-8"
               >
@@ -182,7 +184,7 @@
       <!-- =================== start work  =================== -->
       <section class="work" id="work">
         <div class="header text-center">
-          <h2 class="heading text-6xl font-bold">My Recent Works</h2>
+          <h2 class="heading-gradient text-6xl font-bold">My Recent Works</h2>
           <p class="text-muted text-lg my-5">
             We put your ideas and thus your wishes in the form of a unique web
             project that inspires you and you customers.
@@ -190,8 +192,8 @@
         </div>
 
         <div class="container">
-          <div class="row mt-20">
-            <div class="w-full work-left md:w-1/2 px-4 mb-8 box-Shadow">
+          <div class="grid gap-30 lg:grid-cols-2 mt-20">
+            <div class="w-full work-left lg:col-span-1 box-shadow">
               <div class="relative overflow-hidden rounded-lg shadow-lg group">
                 <img src="./src/img/1.jpg" alt="" class="w-full h-auto" />
                 <div
@@ -205,7 +207,7 @@
                 </div>
               </div>
             </div>
-            <div class="w-full work-right md:w-1/2 px-4 mb-8 box-Shadow">
+            <div class="w-full work-right lg:col-span-1 box-shadow">
               <div class="relative overflow-hidden rounded-lg shadow-lg group">
                 <img src="./src/img/2.jpg" alt="" class="w-full h-auto" />
                 <div
@@ -219,7 +221,7 @@
                 </div>
               </div>
             </div>
-            <div class="w-full work-left md:w-1/2 px-4 mb-8 box-Shadow">
+            <div class="w-full work-left lg:col-span-1 box-shadow">
               <div class="relative overflow-hidden rounded-lg shadow-lg group">
                 <img src="./src/img/4.jpg" alt="" class="w-full h-auto" />
                 <div
@@ -233,7 +235,7 @@
                 </div>
               </div>
             </div>
-            <div class="w-full work-right md:w-1/2 px-4 mb-8 box-Shadow">
+            <div class="w-full work-right lg:col-span-1 box-shadow">
               <div class="relative overflow-hidden rounded-lg shadow-lg group">
                 <img src="./src/img/3.jpg" alt="" class="w-full h-auto" />
                 <div
@@ -255,7 +257,7 @@
 
       <section class="skills py-20" id="skills">
         <div class="header text-center">
-          <h2 class="heading text-6xl font-bold">My Skills</h2>
+          <h2 class="heading-gradient text-6xl font-bold">My Skills</h2>
           <p class="text-muted text-lg my-5">
             We put your ideas and thus your wishes in the form of a unique web
             project that inspires you and you customers.
@@ -263,7 +265,7 @@
         </div>
         <div class="container">
           <div
-            class="row mt-10 justify-center gap-6 lg:gap-4 md:justify-between"
+            class="flex flex-wrap mt-10 justify-center gap-6 lg:gap-4 md:justify-between"
           >
             <div class="md:w4/12 lg:3/12">
               <div
@@ -321,19 +323,23 @@
       <!-- =================== start contact  =================== -->
       <section class="contact bg-black py-10" id="contact">
         <div class="header text-center">
-          <h2 class="heading text-6xl font-bold">My Contact</h2>
+          <h2 class="heading-gradient text-6xl font-bold">My Contact</h2>
           <p class="text-muted text-lg my-5">
             We put your ideas and thus your wishes in the form of a unique web
             project that inspires you and you customers.
           </p>
         </div>
         <div class="container">
-          <div class="row justify-between items-center gap-y-10 my-13">
-            <div class="lg:w-7/12">
+          <div
+            class="grid md:grid-cols-3 justify-between items-center gap-10 my-13"
+          >
+            <div class="md:col-span-2">
               <div
                 class="contact-form contact-form bg-[#140C1C] p-3 py-5 lg:p-10 rounded-2xl"
               >
-                <h3 class="heading text-5xl font-bold">Let's work together!</h3>
+                <h3 class="heading-gradient text-5xl font-bold">
+                  Let's work together!
+                </h3>
                 <p class="text-muted my-3 text-lg">
                   I design and code beautifully simple things and i love what i
                   do. Just simple like that!
@@ -395,8 +401,8 @@
                 </form>
               </div>
             </div>
-            <div class="lg:w-4/12 order-first lg:order-last">
-              <div class="boxes text-white row flex-col gap-y-6">
+            <div class="md:col-span-1">
+              <div class="boxes text-white flex flex-wrap flex-col gap-y-6">
                 <div class="box flex gap-5">
                   <span
                     class="size-12 flex justify-center items-center bg-gradient-to-br from-secondary to-primary rounded-full"

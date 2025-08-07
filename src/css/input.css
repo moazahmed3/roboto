@@ -1,13 +1,69 @@
-@config "../../tailwind.config.js";
 @import "tailwindcss";
 
+@layer base {
+  h2 {
+    @apply text-6xl font-bold;
+  }
+}
+@theme {
+  /* color */
+  --color-primary: #8750f7;
+  --color-secondary: #391c74;
+  --color-body: #0f0715;
+  --color-muted: #dddddd;
+
+  /* font  */
+  --font-primary: "Sora", sans-serif;
+
+  /*animate  */
+  --animate-typing: typing 7s infinite;
+}
 @layer components {
-  body {
-    @apply font-primary;
+  /* button  */
+  .btn {
+    @apply inline-block text-2xl leading-none rounded-full py-4 px-7 transition-all duration-300 ease-in-out cursor-pointer tracking-wide;
   }
 
+  /* button-primary */
+
+  .btn-primary {
+    @apply text-white capitalize inline-block 
+           bg-gradient-to-r 
+           from-secondary 
+           via-primary 
+           to-secondary 
+           bg-[length:200%] 
+           hover:bg-[position:-100px];
+  }
+
+  /* button-secondary */
+  .btn-secondary {
+    @apply mt-5 border border-primary 
+           text-primary 
+           hover:text-white 
+           hover:bg-primary 
+           bg-transparent;
+  }
+
+  /* input */
+  .form-control {
+    @apply block w-full text-white text-xl leading-none px-5 py-3 rounded-lg 
+           transition-all duration-300 ease-out 
+           bg-black 
+           border border-[rgba(136,136,136,0.35)] 
+           shadow-none  focus:drop-shadow-[0_0_30px_rgba(135,80,247,0.2)];
+  }
+}
+
+@layer utilities {
+  /* container  */
+  .container {
+    @apply mx-auto px-4 sm:px-6 lg:px-16 xl:px-20 2xl:px-24;
+  }
+
+  /* link-underline */
   .link-underline {
-    @apply hover:text-primary relative;
+    @apply relative text-white transition-colors duration-300 group-hover:text-primary;
   }
 
   .link-underline::after {
@@ -19,37 +75,153 @@
     @apply w-full;
   }
 
-  .row {
-    @apply flex flex-wrap;
+  /* h2 , h1  heading-gradient */
+  .heading-gradient {
+    @apply bg-gradient-to-r from-primary to-secondary via-80% via-white  bg-clip-text text-transparent;
   }
 
-  .heading {
-    @apply bg-gradient-to-r from-primary to-white bg-clip-text text-transparent;
-  }
-
-  .btn {
-    @apply inline-block text-2xl leading-none rounded-full py-4 px-7 transition-all duration-300 ease-in-out cursor-pointer tracking-wide;
-  }
-
-  .btn-primary {
-    @apply text-white capitalize inline-block bg-gradient-to-r from-secondary via-primary to-secondary bg-[length:200%] hover:bg-[-100px];
-  }
-
-  .btn-secondary {
-    @apply text-primary border border-primary bg-transparent mt-5 hover:text-white hover:bg-primary;
-  }
-
-  .typing::after {
-    @apply inline-block overflow-hidden break-words;
-    content: "";
-    animation: typing 7s infinite;
-  }
-
-  .box-Shadow {
+  /*  box-shadow */
+  .box-shadow {
     @apply drop-shadow-[0_0_30px_rgba(135,80,247,0.2)];
   }
 
-  .form-control {
-    @apply block w-full bg-[#050709] border border-[#88888859] text-white text-xl leading-none px-5 py-3 rounded-lg transition-all duration-300 ease-out focus:drop-shadow-[0_0_30px_rgba(135,80,247,0.2)];
+  @keyframes typing {
+    0% {
+      content: "I am Fr|";
+    }
+    12% {
+      content: "I am Fro|";
+    }
+    14% {
+      content: "I am Fron|";
+    }
+    16% {
+      content: "I am Front|";
+    }
+    18% {
+      content: "I am Front-|";
+    }
+    20% {
+      content: "I am Front-E|";
+    }
+    22% {
+      content: "I am Front-En|";
+    }
+    24% {
+      content: "I am Front-End|";
+    }
+    26% {
+      content: "I am Front-End D|";
+    }
+    28% {
+      content: "I am Front-End De|";
+    }
+    30% {
+      content: "I am Front-End Dev|";
+    }
+    32% {
+      content: "I am Front-End Deve|";
+    }
+    34% {
+      content: "I am Front-End Devel|";
+    }
+    36% {
+      content: "I am Front-End Develo|";
+    }
+    38% {
+      content: "I am Front-End Develop|";
+    }
+    40% {
+      content: "I am Front-End Developer|";
+    }
+    42% {
+      content: "I am Front-End Developer|";
+    }
+    44% {
+      content: "I am Front-End Develope|";
+    }
+    46% {
+      content: "I am Front-End Develop|";
+    }
+    48% {
+      content: "I am Front-End Develo|";
+    }
+    50% {
+      content: "I am Front-End Devel|";
+    }
+    52% {
+      content: "I am Front-End Deve|";
+    }
+    54% {
+      content: "I am Front-End Dev|";
+    }
+    56% {
+      content: "I am Front-End D|";
+    }
+    58% {
+      content: "I am Front-End |";
+    }
+    60% {
+      content: "I am Front-End|";
+    }
+    62% {
+      content: "I am Front-|";
+    }
+    64% {
+      content: "I am Fro|";
+    }
+    66% {
+      content: "I am Fr|";
+    }
+
+    72% {
+      content: "I am Fr|";
+    }
+    74% {
+      content: "I am Fre|";
+    }
+    76% {
+      content: "I am Free|";
+    }
+    78% {
+      content: "I am Freel|";
+    }
+    80% {
+      content: "I am Freela|";
+    }
+    82% {
+      content: "I am Freelan|";
+    }
+    84% {
+      content: "I am Freelanc|";
+    }
+    86% {
+      content: "I am Freelance|";
+    }
+    88% {
+      content: "I am Freelancer|";
+    }
+
+    90% {
+      content: "I am Freelance|";
+    }
+    92% {
+      content: "I am Freelan|";
+    }
+    94% {
+      content: "I am Freela|";
+    }
+    96% {
+      content: "I am Freel|";
+    }
+    97% {
+      content: "I am Free|";
+    }
+    99% {
+      content: "I am Fr|";
+    }
+    100% {
+      content: "I am Fr|";
+    }
   }
 }
